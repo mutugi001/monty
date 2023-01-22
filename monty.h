@@ -11,6 +11,7 @@
 #include <errno.h>
 #include <limits.h>
 #include <ctype.h>
+
 #define UNUSED(x) (void)(x)
 #define TRUE 1
 #define FALSE 0
@@ -63,7 +64,8 @@ void free_all(void);
 int is_leading_digit(char ascii_char);
 int _strtol(char *num_string, unsigned int line_number);
 
-
+int process_file(char *filename, stack_t **stack);
+void delegate_op(stack_t **stack, char *op, unsigned int line_number);
 void instruction_push(stack_t **stack, unsigned int line_number);
 void instruction_pop(stack_t **stack, unsigned int line_number);
 void instruction_pint(stack_t **stack, unsigned int line_number);
