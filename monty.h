@@ -57,6 +57,7 @@ typedef struct glob_s
 } glob_t;
 
 extern glob_t glob;
+
 void stack_init(stack_t **head);
 void free_all(void);
 int is_leading_digit(char ascii_char);
